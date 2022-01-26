@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+           background-color: rgb(105, 105, 173);
+           color: white;
+           font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+     <h1>Olá, mundo!</h1>
+     <p>Ja me livrei da maldição!!</p>
+     <script>
+        /* no prompt, o codigo so recebe strings, entao temos q converter string para number. Tem 3 maneiras: 
+        Number.parseInt(n)
+        Number.parseFloat(n)
+        Number(n) --> mais recente, o proprio js trata pra decidir se é um ou outro */
+        // number + number para soma
+        // string + string para concatenação
+         var n1 = Number(window.prompt("Digite um numero:"))
+         var n2 = Number(window.prompt("Digite outro numero:"))
+        var s = n1 + n2;
+       //  window.alert('a soma dos numeros é: ' + s)
+        /* pra converter numero pra string tem 2 modos:
+        String(n)
+        n.toString()
+        n é o item a ser convertido */
+
+/* exemplo de tamplate strings feito no node:
+
+> nome = 'lucas'
+'lucas'
+> idade = 28
+28
+> nota = 6
+6
+> `o aluno ${nome} de ${idade} de idade,  tirou nota ${nota}`  --> somente com crase. o ${} chama-se placeholder
+'o aluno lucas de 28 de idade,  tirou nota 6'
+> 'o aluno ' + nome + ' de ' +idade+ ' tirou nota ' +nota
+'o aluno lucas de 28 tirou nota 6'
+*/
+        window.alert(`a soma entre ${n1} e  ${n2} é: ` + s) //exemplo do tamplate string
+
+     </script>
+
+</body>
+</html>
