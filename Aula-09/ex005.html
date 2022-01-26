@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(0, 73, 168);
+            color: white;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <!-- <div name="msg">Clique em mim</div> -->
+    <br>
+    <script>
+       // window.document.write(window.document.URL)
+
+        var p1 = window.document.getElementsByTagName('p')[0 ];
+        var corpo = window.document.body
+
+        /* window.document.write('Assim esta escrito: ' + p1.innerText)
+        p1.style.color = 'red';
+        corpo.style.background = 'black';
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green'
+        d.innerText = 'Estou no aguardo...' 
+        var d = window.document.getElementsByName('msg')[0];
+        d.innerText = 'Olá!' */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'green';
+
+    </script>
+
+<!--  Árvore DOM
+          ______Window_______
+          /         |       \
+    location     document    history
+                    |
+                  html
+                /     \
+            head       body
+           /   \         |
+        meta   title     |
+                         /\
+                       h1  p
+                            \
+                            strong
+
+
+exemplo: html é 'parent' de head e head é 'child' de html.                       
+
+Ps: existem mts outros objetos em window, foi so um exmplo isso ai 
+
+
+da pra selecionar os elementos da arvore por:
+
+.marca -> getElementsByTagName() []
+.ID -> getElementById()
+.Nome -> getElementsByName() []
+.Classe  -> getElementsByClassName () []
+.Seletor -> querySelector()     querySelectorAll()
+
+o innerHTML -> pega o texto com as tags child, ou seja, a formatação e talz
+o innterText -> so pega o texto sem tags.
+
+dica: quando  o getElements estiver assim (no plural), significa q precisa passar um valor do array []
+-->
+
+</body>
+</html>
