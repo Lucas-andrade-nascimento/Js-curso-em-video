@@ -1,0 +1,11 @@
+inicio = 2
+fim = 10
+salto = 2
+
+while (inicio <= fim){
+    cont = inicio + salto;
+    console.log(cont);
+}
+// preparar um programa que conte de um numero a outro, com o gap que o usuario escolher
+// criar uma variavel para receber o primeiro numero, o segundo numeero e o salto
+// criar um laço de repetição que vai contar do primeiro numero, ate o segundo, com o salto defindo pelo user
